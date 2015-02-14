@@ -1,69 +1,371 @@
-﻿<?xml version="1.0" ?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="xsl/emma-xslt-persName.xsl"?>
 <!DOCTYPE TEI
   SYSTEM 'http://www.tei-c.org/release/xml/tei/custom/schema/dtd/tei_all.dtd'>
-<TEI>
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title>
-                    Insert Document Title Here
-                </title>
-                <author>
-                    Insert Author Name Here
-                </author>
-                <respStmt>
-                    <resp>
-                        Insert Name of Project Responsible for Transcription
-                    </resp>
-                    <name>
-                        Insert Name of Project Lead
-                    </name>
-                </respStmt>
-            </titleStmt>
-            <publicationStmt>
-                <distributor>
-                    Insert Distributor Name Here
-                </distributor>
-                <address>
-     <addrLine/>
-    </address>
-                <idno type="Insert Your Type Here">
-                    Insert ID Number Here
-                </idno>
-                <availability>
-                    <p>
-                        Insert Copyright Data Here
-                    </p>
-                </availability>
-                <date when="Insert Date Here">
-                    Insert Date Here
-                </date>
-            </publicationStmt>
-            <sourceDesc>
-                <bibl>
-                    Enter Bibliographical Information Here
-                </bibl>
-            </sourceDesc>
-        </fileDesc>
-        <encodingDesc>
-            <projectDesc>
-                <p>
-                    Insert Project Here
-                </p>
-            </projectDesc>
-        </encodingDesc>
-        <revisionDesc>
-            <list>
-                <item>
-                    <date when="Insert Date of Last Edit">
-                        Insert Date of Last Edit
-                    </date>
-                    Last checked
-                </item>
-            </list>
-        </revisionDesc>
-    </teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:sk="http://www.faculty.washington.edu/ketchley/ns/1.0" xml:lang="en">
+      
+   <!-- TO-DO LIST as of 1/16/15
+   - check P5 conformancy
+   - complete works cited
+   -->
+   
+	<teiHeader type="AACR2">
+		  <!--
+		  The type attribute in teiHeader element above asserts that the header provides 
+		  enough information to create a bibliographic record that complies with the 
+		  Anglo-American Cataloguing Rules, 2nd ed. (1978; rev. 1988).
+		  -->
+		  
+		<fileDesc>
+		  <!--
+		  The  file description, tagged <fileDesc>, contains "a full bibliographical description 
+		  of the computer file itself, from which a user of the text could derive a proper bibliographic 
+		  citation, or which a librarian or archivist could use in creating a catalogue entry recording 
+		  its presence within a library or archive" (TEI P4X, ch. 5).
+		  -->
+		  
+			<titleStmt>
+					<title>Emma B. Andrews, A Journal on the Bedawin 1889-1913</title>
+
+					<!-- 
+					List of the editors of the edition, using the form of name
+					that is used for professional publications.
+					 -->
+					<editor role="principal-editor"><persName ref="#SLK">Sarah L. Ketchley</persName></editor> 
+					
+					<!-- 
+					Statement of Responsibility supplies a statement of responsibility for the 
+					intellectual content of a text, edition, recording, or series, where the 
+					specialized elements for authors, editors, etc. do not suffice or do not apply.
+					 -->
+					<respStmt>
+					   <resp>Creation of digital documents from microfilm of manuscript pages</resp>
+					   <persName>Sarah L. Ketchley</persName>
+					</respStmt>
+					<respStmt>
+					   <resp>Initial transcription of diaries into plain text format </resp>
+					   <persName ref="#SLK">Sarah L. Ketchley</persName>
+					   <persName>Megan Tapp</persName>
+					   <persName>Ariella Fish</persName>
+					   <persName>Tessa Carter</persName>
+					   <persName>Janice Garr</persName>
+					</respStmt>
+					<respStmt>
+					   <resp>Proof-reading, editing and preparation of plain-text for 'Newbook Autotagger', debugging final script</resp>
+					   <persName ref="#SLK">Sarah L. Ketchley</persName>
+					   <persName>Megan Tapp</persName>
+					   <persName>Ema Grey</persName>
+					   <persName>Tessa Carter</persName>
+					   <persName>Janice Garr</persName>
+					   <persName>Sarah Johnson</persName>
+					   <persName>Allison Skinner</persName>
+					</respStmt>
+					<respStmt>
+					   <resp>Encoding in TEI P5 </resp>
+					   <persName>Allison Skinner</persName>
+					   <persName ref="#SLK">Sarah L. Ketchley</persName>
+					</respStmt>
+					<respStmt>
+					   <resp>Development of prototype readers </resp>
+					   <persName>Chris Sumption</persName>      
+					</respStmt>
+					<respStmt>
+					   <resp>Biographical Research</resp>
+					   <persName>Sarah Johnson</persName> 
+					   <persName ref="#SLK">Sarah L. Ketchley</persName>
+					</respStmt>
+					<respStmt>
+					   <resp>Image Research</resp>
+						<persName>Chelsea Cooper</persName> 
+						<persName ref="#SLK">Sarah L. Ketchley</persName>
+					</respStmt>
+					<respStmt>
+					   <resp>Lindon Smith Diary Research</resp>
+					   <persName>Gabrielle Wilson </persName> 
+					   <persName ref="#SLK">Sarah L. Ketchley</persName>
+					</respStmt>
+					<respStmt>
+						<resp>Case Holt Transcription</resp>
+						<persName>Janice Garr</persName>
+						<persName ref="#SLK">Sarah L. Ketchley</persName>
+					</respStmt>
+					<respStmt>
+					   <resp>XSL script develoment</resp>
+					   <persName>Pranav Shivanna </persName> 
+					   <persName ref="#SLK">Sarah L. Ketchley</persName>
+					</respStmt>
+					<respStmt>
+						<resp>Javascript integration</resp>
+						<persName>Tony Le</persName>
+						<persName ref="#SLK">Sarah L. Ketchley</persName>
+					</respStmt>
+			</titleStmt>
+			 
+			<extent>approx. 200 kilobytes</extent>
+			 
+			<publicationStmt>
+
+				<publisher>Newbook Digital Texts.
+				   <address>
+					  <addrLine n="1">Department of Near Eastern Languages and Civilization</addrLine>
+					  <addrLine n="2">University of Washington</addrLine>
+					  <addrLine n="3">229 Denny Hall, Box 353120</addrLine>
+					  <addrLine n="4">Seattle, WA 98195</addrLine>
+				   </address>
+				</publisher>
+
+				<pubPlace>Seattle, WA</pubPlace>
+
+				<!-- 
+				The <idno> element is only required for documents with a standard id number
+				such as a library call number.
+				-->
+
+				<availability>
+				   <p>The Emma B. Andrews diary is the property of the Metropolitan Museum of Art, New York and the American Philosophical Society, Philadelphia.</p>
+				   <p xml:id="CreativeCommons">
+					  <![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://creativecommons.org/images/public/somerights20.png"/></a><br/>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-Noncommercial-Share Alike 3.0  License</a>.<br/>
+					  This license does not transfer any rights regarding material used in the edition by permission of a third party.]]>
+				   </p>
+				</availability>
+				
+				<date>2014-12-13</date>
+
+			 </publicationStmt>
+			 
+			<sourceDesc> 
+				<biblFull>
+
+					<titleStmt>
+
+					  <!--
+					  The "level" attribute "indicates whether this is the title of an article, book, journal, 
+					  series, or unpublished material, indicated as a, b, j, s, or u" (TEI P4X, ch. 5.2.1).
+					  -->
+					  <title level="u">A Journal on the Bedawin</title>
+
+					  <author>Emma Buttles Andrews (1837 - 1922)</author>
+
+					</titleStmt>
+
+				   <!-- 
+						The <extent> element indicates the size of your source document, in whatever 
+						units are appropriate (usually pages; for example, 2 pp.) 
+					-->
+					<extent>9 pp.</extent>
+
+					<publicationStmt>
+					  <p>Publication statement.</p>
+					</publicationStmt>
+				   
+					<notesStmt>
+					  <!-- 
+						  TAKE NOTE: Your entire header should answer the following questions about your 
+						  source document. At this point in your header, you should discuss anything in 
+						  this list not mentioned elsewhere in the header.
+						 
+							1. What is the document (letter, will, etc.)?
+							2. What does it say about itself (titles, descriptive notes, etc.)?
+							3. What does it contain (no. of pages/sheets, enclosures, etc.)?
+							4. How is it put together (folded sheets, binding, etc.)?
+							5. What is it made of (paper, vellum, etc.)?
+							6. What is its size (i.e., physical dimensions)?
+							7. How is it packaged/contained (binding, envelope, folder, box, etc.)?
+							8. How is it related to other versions (original, copy, print history)?
+						 
+							You can use more than one paragraph (tagged <p> </p>).
+					   -->
+					  
+						<note type="descriptive" resp="ed">
+							 <!-- 
+							 We will use this note to describe the physical diary.
+							 -->
+							 <!-- <p>
+								<figure rend="embed">
+								   <head>Bookplate</head>
+								   <graphic url="insert URL to image of Bedawin bookplate"/>
+								   <figDesc>
+									  Bookplate located inside front cover of first volume of the edition housed in the Metropolitan Museum of Art.
+								   </figDesc>
+								</figure>
+								 V.19. Emma B. Andrews Diaries, 1889–1912</p>
+							 <p><emph rend="bold">Collation</emph>: ? mm x ? mm. 9 leaves. Unlined paste-down endpaper; [1-9] typewritten leaves, plain paper, entries from 21 Nov. 1912 through 16 Apr. 1913</p>
+							 <p><emph rend="bold">Paper</emph>: White plain paper. </p>
+							 -->
+						</note> 
+					  
+						<note type="introductory" resp="ed">
+							 <!-- 
+							 We will use this note to contain an historical/critical introduction to the
+							 text of the Andrews Diary.
+							 --> 
+							<p rend="h3">
+								Volume 19 Summary   
+							</p>
+							<p>The party spends a week in New York before departing on Saturday 16th November 1912. Their route to Egypt took them via Naples on the SS Berlin.  Accompanying Emma and Theodore were Mary Newberry and her daughter Doris on their first trip to Egypt, and the faithful manservant Daniel Jones.  The party met Harry Burton in Italy, before boarding the Prinz Heinrich for Egypt.  Emma alludes to Theodore’s ongoing decline in health.  The party spend  a week in Cairo sightseeing and catching up with old friends and colleagues. Emma takes Theodore to the Cairo Museum to visit Sir Gaston Maspero and discuss proposed repairs to the ‘magnificent cover to the so-called Tyii’s coffin’.  The piece has never been displayed, and Emma notes that it will make a fine addition to ‘Theodore’s exhibit at the Museum’.</p>  
+							<p>The party settles on board the ‘Beduin’, and the usual stream of guests begin to stop by for tea and conversation. Some of the regulars include Rev. Archibald Sayce. The journey south takes 10 days; they arrive in Luxor December 22 1912, where they are greeted by old friends including Mr Whymper, Mr. Erskine Nicol, Harry Burton and Mr. Lancelot Crane. Emma notes that Mr. Nicol paints a picture of the mountain range opposite Luxor - ‘the very best picture I ever saw of his’. She notes that Harry Burton is digging at Medinet Habu. Baron Von Bissing and his wife make regular appearances, while Maspero and Alan Gardiner visit the party.  Whilst in Luxor, the group and Jones spent three nights in the Valley, presumably in Davis’s Dig House.</p>   
+							<p>Emma’s comments are brief, almost terse, listing visitors and guests.  Her tone probably reflects the difficult circumstances with Davis.</p>
+							<p>The party continues south to Aswan in early March, battling high winds along the way.  Mary and Doris spent the time sightseeing, before turning around to head back north to Luxor and then back north again towards Cairo with a stop to visit Abydos en route.  The group check into the Ghezireh Palace Hotel in early April and Emma records that ‘the new bridge is finished, and trains are running over it. A very fine and long one- and a great convenience - but it spoils the garden somewhat. Cairo is fast changing and improving but losing its unique interesting eastern features,’  A week is spent entertaining guests, including Howard Carter, Albert Lythgoe and von Bissing again.  By mid-April the group land in Naples on their return journey, passing through Florence and visiting with Jeanette and Mary Buttles.  Theodore is taken out to drive daily by David Constantini and Harry Burton, accompanied by ‘some one or two of the girls’. The final entry is April 16th 1913, stating that the group will be leaving the next day for London.</p>
+						</note>
+
+					</notesStmt>
+				   
+				</biblFull>
+			   
+				<listPerson type="editors">
+					<head>Editors</head>
+					<person xml:id="SLK">
+						<persName>Ketchley, Sarah L.</persName>
+						<birth when="1968">
+							<placeName>Barton-on-Sea, UK</placeName>
+						</birth>
+						<education>BA, University of Birmingham,UK (1993)</education>
+						<education>PhD, University of Birmingham, UK (2004)</education>
+						<occupation>Egyptologist</occupation>
+						<nationality>U.K.</nationality>
+						<note type="biographical"> Sarah L. Ketchley is an Independent Scholar and Egyptologist based at the University of Washington, Seattle, WA. She is the co-founder of Newbook Digital Texts (http://depts.washington.edu/ndth/) with Professor Walter Andrews and Dr. Mary Childs. She is the Director of the Emma B. Andrews Digital Diary Project (www.emmabandrews.org). The projects have received funding from an NEH Digital Humanities Start-Up Grant, and a University of Washington Simpson Center Summer Funding award. She has collaborated with Professor Walter Andrews, Research Professor of Near Eastern Languages and Literature and Dr. Stacy Waters, specialist in Medieval English texts, mark-up languages and digitization fundamentals to develop a model of preservation for distributed, multimodal digital humanities projects.</note>
+					</person>
+				</listPerson>
+				   
+			   <!-- This work to complete. 1/21/15
+				Though TEI provides for more fine-grained encoding, we will enter bibliography items as we would expect them to be displayed, except for noting text that requires special
+				formatting (e.g., titles).
+				For example: 
+				
+			   <bibl>
+			   <head>Works Cited</head>
+			   <bibl xml:id="SmithA" n="SmithA">Smith, Archibald. <title level="m">The Autobiography of Archibald Smith, Plain Township Pioneer</title>. Ed. John E. Saveson. New
+				  Albany, Ohio: New Albany Plain Township Historical Society, 1999. Print.
+				</bibl>
+			   </listBibl> 
+			   -->
+			 </sourceDesc>
+			
+		</fileDesc> 
+			 
+
+		  <!--
+		  The encoding description, tagged <encodingDesc>, describes "the relationship 
+		  between an electronic text and its source or sources" (TEI P4X, ch. 5).
+		  -->
+		<encodingDesc>
+
+			<projectDesc>
+				<p>This edition is the produced under the auspices of Newbook Digital Texts, an independent publishing house established at the University of Washington with the goals of publishing a series of collaboratively produced electronic editions of previously unpublished and little-known manuscripts. These documentary editions are intended to provide wide exposure and access to manuscripts that might otherwise be difficult for scholars to discover and consult, and to provide users with a variety of tools for studying those texts. The first publishing project was the Alexander Svoboda Travel Journal. On the 15th of April, 1897, a 19 year-old European resident of Baghdad, named Alexander Richard Svoboda, set out on a long journey to Europe by caravan, boat and train. From a large and influential family of merchants, artists, and explorers settled in Ottoman Iraq since the end of the 18th century, Alexander traveled in the company of his parents and a departing British diplomat accompanied by his retinue. They followed a circuitous route through the Middle East to Cairo and thence to Europe on a three and a half month journey which Alexander described day-by-day in a journal written in the Iraqi Arabic of his time. </p>
+				<p>Each text was edited in connection with an undergraduate or graduate independent research internship offered
+				   by Dr. Sarah Ketchley, Visiting Scholar and Egyptologist at the University of Washington, and by Professor Walter Andrews, Research Professor of Near Eastern Languages and Civilization at the University of Washington. The
+				   courses provide students with an opportunity to explore issues of textuality
+				   and mediation that arise when our cultural archives spread from page to screen and
+				   from library shelves to networked databases. Electronic textual editing serves as our
+				   vehicle for examining what happens—and envisioning what might happen—when artifacts
+				   in one medium are represented in another medium, especially with regard to the
+				   interpretive work of reading. Electronic textual editions also provide a contact zone
+				   that can help us reflect on what manuscript, print, and "born digital" artifacts can
+				   tell us about their unique properties and their relationships to one another.</p>
+				<p>While providing a reliable textual edition is a <foreign xml:lang="lat">sine qua
+					  non</foreign>, the Smith edition also explores ways of telling four stories
+				   inextricably woven into our work: the lives and historical milieu evoked by the
+				   texts, the history of the physical journal (including its recent restoration), the
+				   editorial process that gave rise to this particular interpretation of the text, and
+				   the mediation of our electronic delivery system. </p>
+			</projectDesc>
+			<!--
+				In addition to prose description, the Editorial Practices Declaration may contain 
+				specialized elements concerned with correction, normalization, quotation, hyphenation, 
+				segmentation, date and number format, and interpretive apparatus (TEI P4X, ch. 5.3.3).
+			-->
+			<editorialDecl>
+				
+				<!-- 
+					TAKE NOTE: Explain your editorial method:
+					   
+					If you employ image files, describe how they were produced and note where they are stored.
+					Describe any editorial guidelines you followed (e.g., how you treated hyphenation, whether 
+					you corrected apparent errors, and any other decisions about how to treat recurrent features).
+					Describe any special symbols that you use in your text to indicate additions, corrections, 
+					cancellations, and so on. This important explanation provides a reader's guide to the text.
+
+					You can use more than one paragraph (tagged <p> </p>).
+
+					May include asset diagram and links to asset database.
+					 
+				-->
+
+				<p>
+				   <emph rend="bold">Conversion from Microfilm</emph>. The original hand-written diary is lost; a microfiche copy of a 1919 typewritten transcription was obtained from the American Philosophical Society, Philadelphia. The copy was originally owned by Herbert E. Winlock.  The microfiche pages were converted into PDFs which were our primary stream of source data.
+				</p>
+				<p>
+				   <emph rend="bold">Production Location of Digital Assets</emph>. The TEI P5-encoded
+				   transcription of the Andrews journal, along with XSL style sheets used to provide
+				   variant "views" of the edition, TEI ODD documents used to produce custom schemas
+				   based on the TEI markup language, and the resulting schemas are stored on a server
+				   hosted by the University of Washington and in a Github repository. Readers may download copies of those source files via a link at the
+				   top of this page. 
+				   The files constituting the project's Web site are stored on a Web server</p>
+				<p>
+				   <emph rend="bold">Archiving of Digital Assets</emph>. Once the edition is complete,
+				   its digital assets will be archived in an online digital repository.
+				</p>
+
+			</editorialDecl>
+			 
+				<!-- <p>
+
+					NOTE: Update to include informationa about TEI ODD files.  
+					<emph rend="bold">Customization of the TEI P5 Schema</emph>. Customization consisted primarily of restricting
+					encoding to certain modules and elements as well as enforcing some attribute values. See the ODD file for 
+					complete details.
+				</p> -->
+				
+			
+		   
+		</encodingDesc>
+		<profileDesc>
+			 
+			<!--
+				The text profile, tagged profileDesc, contains "provides a detailed description of non-bibliographic aspects of a text, specifically the languages and sublanguages used, the situation in which it was produced, the participants and their setting." (TEI P5.2.7.0, ch. 2.4).
+			-->
+
+			<creation>
+				<date>2014-12-14</date>
+			</creation>
+
+
+			<!-- Note any languages that appear in your document (use multiple tags, if necessary). -->
+			<langUsage>
+				<language ident="eng">English</language>
+			</langUsage>
+
+			<textClass>
+				<!-- 
+					Supply a list of keywords for your document from the Library of Congress Subject Headings
+				-->
+				<keywords scheme="#EBA">
+					<term>Diaries</term>
+					<term>Archaeology--Egypt</term>
+					<term>Egyptology</term>
+					<term>Egypt--Antiquities</term>
+					<term>Egypt--Description and travel</term>
+					<term>Italy--Description and travel</term>
+					<term>Luxor (Egypt)--Antiquities</term>
+					<term>Nile River--Description and travel</term>
+				</keywords>
+
+			</textClass>
+		</profileDesc>
+
+		<revisionDesc>
+
+			<!--
+				The revision history, tagged revisionDesc, allows "the encoder to provide a history of 
+				changes made during the development of the electronic text" (TEI P4X, ch. 5).
+				Add additional changes at the top of the list.
+			-->
+			<change when="2015-1-22" who="Editors">Released a public working draft of the edition.</change>
+
+		</revisionDesc>
+
+	</teiHeader>
     <text>
         <body>
             <pb n="105"/>
